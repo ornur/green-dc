@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import logo from "@/app/assets/logo.svg";
+import logo from "@/app/assets/logo.svg?url";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";

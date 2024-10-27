@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/app/assets/logo.svg";
+import logo from "@/app/assets/logo.svg?url";
 import InstagramIcon from "@/app/assets/instagram.svg?url";
 import TelegramIcon from "@/app/assets/telegram.svg?url";
 import FacebookIcon from "@/app/assets/facebook.svg?url";
@@ -20,8 +20,8 @@ export default function Footer() {
           About our projects
         </h1>
         <p className="text-white/50 font-light">
-          Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-          вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на
+          Lorem Ipsum - это текст-&quot;рыба&quot;, часто используемый в печати и
+          вэб-дизайне. Lorem Ipsum является стандартной &quot;рыбой&quot; для текстов на
           латинице с начала XVI века. В то время некий
         </p>
       </div>
@@ -37,7 +37,7 @@ export default function Footer() {
           Our social links
         </h1>
         <p className="text-white/50 font-light pt-5">
-          Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+          Lorem Ipsum - это текст-&quot;рыба&quot;, часто используемый в печати и
           вэб-дизайне. Lorem Ipsum является
         </p>
         <div className="my-5 flex gap-5">
