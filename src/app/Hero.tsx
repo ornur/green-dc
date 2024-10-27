@@ -6,7 +6,7 @@ import { toast } from "sonner";
 
 export default function Hero() {
   return (
-    <div className="aspect-[14/5] relative">
+    <div className="aspect-[14/5] relative container">
       <Image
         src={BgHero}
         alt="Hero Image"
