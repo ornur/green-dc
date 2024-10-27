@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
-export function Header() {
+export default function Header() {
   return (
     <header className="bg-base-black text-white">
       <div className="container mx-auto flex items-center justify-between px-20 py-3">

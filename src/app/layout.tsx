@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: "Green Data Centres",
 };
 
+const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string;
+
 export default function RootLayout({
   children,
 }: Readonly<{
