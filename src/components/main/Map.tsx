@@ -8,7 +8,7 @@ import {
   InfoWindow,
   latLngEquals,
 } from "@vis.gl/react-google-maps";
-import locations from "./data";
+import locations from "@/app/data";
 import React from "react";
 
 export default function GMap() {

@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image";
-import BgHero from "../../public/hero 1.png";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
@@ -8,7 +7,7 @@ export default function Hero() {
   return (
     <div className="aspect-[14/5] relative container">
       <Image
-        src={BgHero}
+        src="/hero 1.png"
         alt="Hero Image"
         fill
         sizes="100vw"

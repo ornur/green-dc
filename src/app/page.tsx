@@ -1,7 +1,7 @@
-import Header from "./Header";
-import Footer from "./Footer";
-import Hero from "./Hero";
-import Map from "./Map";
+import Header from "../components/layouts/Header";
+import Footer from "../components/layouts/Footer";
+import Hero from "../components/main/Hero";
+import Map from "../components/main/Map";
 
 export default function Home() {
   return (
