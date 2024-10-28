@@ -7,7 +7,7 @@ import { toast } from "sonner";
 
 export default function CalculateForm() {
   return (
-    <>
+    <div className="container mx-auto">
       <h1 className="mb-12 w-full text-center text-2xl font-bold md:text-4xl">
         Calculate the implementation of green technologies in your data centers.
       </h1>
@@ -34,6 +34,6 @@ export default function CalculateForm() {
           <p>alknfwejodfwepkdowefiweij</p>
         </div>
       </div>
-    </>
+    </div>
   );
 }

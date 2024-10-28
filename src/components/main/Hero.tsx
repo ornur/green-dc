@@ -5,7 +5,7 @@ import { toast } from "sonner";
 
 export default function Hero() {
   return (
-    <div className="aspect-[14/5] relative container">
+    <div className="aspect-[14/5] relative">
       <Image
         src="/hero 1.png"
         alt="Hero Image"
