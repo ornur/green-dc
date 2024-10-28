@@ -23,7 +23,7 @@ export default function GMap() {
 
   return (
     <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string}>
-      <h1 className="font-bold text-3xl my-12 text-center w-full">Data centres began to use &quot;green&quot; technology.</h1>
+      <h1 className="font-bold text-lg md:text-2xl lg:text-3xl my-12 text-center w-full">Data centres began to use &quot;green&quot; technology.</h1>
       <div className="container mx-auto mt-24 mb-48 aspect-[16/7] px-32">
         <Map
           defaultZoom={6}
