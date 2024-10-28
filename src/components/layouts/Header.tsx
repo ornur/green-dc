@@ -48,8 +48,8 @@ export default function Header() {
         >
           Sign in
         </Button>
-        <Sheet>
-          <SheetTrigger>
+        <Sheet >
+          <SheetTrigger className="md:hidden ">
             <MenuIcon className="block md:hidden" />
           </SheetTrigger>
           <SheetContent className="sm:w-[200px] flex flex-col">
