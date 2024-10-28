@@ -11,7 +11,7 @@ import { toast } from "sonner";
 export default function Footer() {
   return (
     <footer className="w-full bg-base-black px-20 py-10 text-white">
-      <div className="container mx-auto flex flex-row gap-28">
+      <div className="container mx-auto flex flex-col md:flex-row gap-28">
         <div className="flex basis-2/5 flex-col gap-5">
           <Link href="/" className="flex items-center gap-x-3">
             <Image src={logo} alt="GDC" width={80} height={80} />
