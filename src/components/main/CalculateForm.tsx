@@ -91,10 +91,9 @@ export default function CalculateForm() {
       setCo2Reduction(result.co2Reduction);
       setRoi(result.roi);
       setPaybackPeriod(result.paybackPeriod);
-    } catch (error: any) {
-      toast.error(
-        error.message ? error.message : "An error occurred. Please try again.",
-      );
+    } catch (error) {
+      const errorMessage = error instanceof Error && error.message ? error.message : "An error occurred. Please try again.";
+      toast.error(errorMessage);
     }
   };
   return (
