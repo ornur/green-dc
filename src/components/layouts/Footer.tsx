@@ -7,8 +7,10 @@ import InstagramIcon from "@/app/assets/instagram.svg?url";
 import TelegramIcon from "@/app/assets/telegram.svg?url";
 import FacebookIcon from "@/app/assets/facebook.svg?url";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
+  const router = useRouter();
   return (
     <footer className="w-full bg-base-black px-20 py-10 text-white">
       <div className="container mx-auto flex flex-col md:flex-row gap-28">
@@ -70,7 +72,7 @@ export default function Footer() {
               width={30}
               height={30}
               onClick={() => {
-                toast.error("Not implemented yet");
+                router.push("https://www.instagram.com/");
               }}
             />
             <Image
@@ -80,7 +82,7 @@ export default function Footer() {
               width={30}
               height={30}
               onClick={() => {
-                toast.error("Not implemented yet");
+                router.push("https://www.telegram.org/");
               }}
             />
             <Image
@@ -90,7 +92,7 @@ export default function Footer() {
               width={30}
               height={30}
               onClick={() => {
-                toast.error("Not implemented yet");
+                router.push("https://www.facebook.com/");
               }}
             />
           </div>
