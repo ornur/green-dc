@@ -6,7 +6,6 @@ import logo from "@/app/assets/logo.svg?url";
 import InstagramIcon from "@/app/assets/instagram.svg?url";
 import TelegramIcon from "@/app/assets/telegram.svg?url";
 import FacebookIcon from "@/app/assets/facebook.svg?url";
-import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 
 export default function Footer() {
@@ -33,25 +32,25 @@ export default function Footer() {
           <h1 className="my-6 font-bold uppercase tracking-wide">Menu</h1>
           <Link
             className="cursor-pointer hover:text-yellow-600 hover:underline"
-            href="#"
+            href="#map"
           >
             Green Map
           </Link>
           <Link
             className="cursor-pointer hover:text-yellow-600 hover:underline"
-            href="#"
+            href="#calculate"
           >
             Calculate
           </Link>
           <Link
             className="cursor-pointer hover:text-yellow-600 hover:underline"
-            href="#"
+            href="/about"
           >
             About us
           </Link>
           <Link
             className="cursor-pointer hover:text-yellow-600 hover:underline"
-            href="#"
+            href="/contacts"
           >
             Contacts
           </Link>
