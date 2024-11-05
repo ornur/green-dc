@@ -1,7 +1,6 @@
 import Footer from "@/components/layouts/Footer";
 import Header from "@/components/layouts/Header";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import BarChartComponent from "@/components/main/BarChart";
 import React from "react";
 
 export default function Formula() {
