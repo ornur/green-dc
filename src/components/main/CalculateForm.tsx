@@ -12,6 +12,7 @@ import {
   TooltipTrigger,
 } from "../ui/tooltip";
 import Link from "next/link";
+import BarChartComponent from "./BarChart";
 
 export default function CalculateForm() {
   const [annualEnergyOffset, setAnnualEnergyOffset] = useState<number | null>(
@@ -23,6 +24,11 @@ export default function CalculateForm() {
   const [co2Reduction, setCo2Reduction] = useState<number | null>(null);
   const [roi, setRoi] = useState<number | null>(null);
   const [paybackPeriod, setPaybackPeriod] = useState<number | null>(null);
+  const [result, setResult] = useState<{
+    year: string;
+    savings: string;
+    ROI: string;
+  } []| null>(null);
   const dataForResults = [
     {
       label: "Total Annual Energy Offset by Wind Power (kWh)",
@@ -101,6 +107,7 @@ export default function CalculateForm() {
       setCo2Reduction(result.co2Reduction);
       setRoi(result.roi);
       setPaybackPeriod(result.paybackPeriod);
+      setResult(result.yearlyData);
     } catch (error) {
       const errorMessage =
         error instanceof Error && error.message
@@ -201,6 +208,9 @@ export default function CalculateForm() {
             </div>
           ))}
         </div>
+      </div>
+      <div className="mb-24 px-5 md:px-20">
+        <BarChartComponent chartData={result} />
       </div>
     </div>
   );

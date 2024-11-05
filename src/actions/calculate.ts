@@ -35,11 +35,29 @@ export async function calculate(formData: FormData) {
   const roi = ((annualCostSavings - amc) / iic) * 100;
   const paybackPeriod = iic / (annualCostSavings - amc);
 
+  const calculateYearlyData = () => {
+    const data = [];
+  
+    for (let year = 1; year <= 5; year++) {
+      const annualCostSavingsForChart = annualEnergyOffset * ec;
+      const ROI = ((annualCostSavingsForChart - amc) / iic) * 100;
+  
+      data.push({
+        year: `Year ${year}`,
+        savings: annualCostSavingsForChart.toFixed(2), // Rounded to 2 decimal places
+        ROI: ROI.toFixed(2), // Rounded to 2 decimal places
+      });
+    }
+
+    return data;
+  }
+
   return {
     annualEnergyOffset,
     annualCostSavings,
     co2Reduction,
     roi,
     paybackPeriod,
+    yearlyData: calculateYearlyData(),
   };
 }

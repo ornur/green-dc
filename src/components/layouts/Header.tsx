@@ -23,11 +23,11 @@ export default function Header() {
             <h1 className="text-2xl font-bold">GDC</h1>
           </Link>
 
-          <Link className="hidden md:block" href="#map">
+          <Link className="hidden md:block" href="/#map">
             Green Map
           </Link>
 
-          <Link className="hidden md:block" href="#calculate">
+          <Link className="hidden md:block" href="/#calculate">
             Calculate
           </Link>
 
