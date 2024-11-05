@@ -5,11 +5,21 @@ import { Button } from "../ui/button";
 import { calculate } from "@/actions/calculate";
 import { toast } from "sonner";
 import { useState } from "react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
+import Link from "next/link";
 
 export default function CalculateForm() {
-  const [annualEnergyOffset, setAnnualEnergyOffset] = useState<number | null>(null);
-  const [annualCostSavings, setAnnualCostSavings] = useState<number | null>(null);
+  const [annualEnergyOffset, setAnnualEnergyOffset] = useState<number | null>(
+    null,
+  );
+  const [annualCostSavings, setAnnualCostSavings] = useState<number | null>(
+    null,
+  );
   const [co2Reduction, setCo2Reduction] = useState<number | null>(null);
   const [roi, setRoi] = useState<number | null>(null);
   const [paybackPeriod, setPaybackPeriod] = useState<number | null>(null);
@@ -92,7 +102,10 @@ export default function CalculateForm() {
       setRoi(result.roi);
       setPaybackPeriod(result.paybackPeriod);
     } catch (error) {
-      const errorMessage = error instanceof Error && error.message ? error.message : "An error occurred. Please try again.";
+      const errorMessage =
+        error instanceof Error && error.message
+          ? error.message
+          : "An error occurred. Please try again.";
       toast.error(errorMessage);
     }
   };
@@ -106,7 +119,17 @@ export default function CalculateForm() {
           action="/"
           className="flex flex-col rounded-lg px-5 py-5 shadow-xl md:w-2/3"
         >
-          <h3 className="text-xl font-bold">Green Data Center Wind Integration Calculator</h3>
+          <div className="flex justify-between">
+            <h3 className="text-xl font-bold">
+              Green Data Center Wind Integration Calculator
+            </h3>
+            <Link
+              href="/formula"
+              className="text-blue-500 hover:text-blue-800 hover:underline"
+            >
+              How it calculates?
+            </Link>
+          </div>
           <div className="grid grid-cols-1 gap-5 py-5 lg:grid-cols-2">
             {dataForInputs.map((input, index) => (
               <div key={index}>
@@ -124,7 +147,7 @@ export default function CalculateForm() {
                       event.key !== "Delete" && // Allow delete
                       event.key !== "ArrowLeft" && // Allow left arrow
                       event.key !== "ArrowRight" && // Allow right arrow
-                      event.key !== "Tab" &&// Allow tab
+                      event.key !== "Tab" && // Allow tab
                       event.key !== "." // Allow decimal point
                     ) {
                       event.preventDefault();
@@ -149,7 +172,9 @@ export default function CalculateForm() {
           </Button>
         </Form>
         <div className="flex flex-col justify-center rounded-lg p-5 shadow-xl md:w-1/3">
-          <h3 className="text-xl font-bold">The cost of green IT technologies</h3>
+          <h3 className="text-xl font-bold">
+            The cost of green IT technologies
+          </h3>
           {dataForResults.map((result, index) => (
             <div key={index} className="py-2">
               <div className="flex items-end gap-1">
@@ -159,7 +184,12 @@ export default function CalculateForm() {
                 <TooltipProvider skipDelayDuration={0} delayDuration={0}>
                   <Tooltip>
                     <TooltipTrigger asChild className="hidden md:block">
-                      <Button variant="outline" className="p-0 m-0 border-0 text-[10px] text-blue-500 hover:bg-transparent">{"(?)"}</Button>
+                      <Button
+                        variant="outline"
+                        className="m-0 border-0 p-0 text-[10px] text-blue-500 hover:bg-transparent"
+                      >
+                        {"(?)"}
+                      </Button>
                     </TooltipTrigger>
                     <TooltipContent>
                       <p>{result.description}</p>
